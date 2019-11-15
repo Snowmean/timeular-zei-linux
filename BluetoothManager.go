@@ -31,7 +31,7 @@ func (bm *BluetoothManager) connectAndRun() {
 	log.Println("Trying to connect to the ZEI")
 
 	cln, err := ble.Connect(context.Background(), func(a ble.Advertisement) bool {
-		return strings.ToUpper(a.LocalName()) == strings.ToUpper("Timeular ZEI")
+		return strings.ToUpper(a.LocalName()) == strings.ToUpper("Timeular Tra")
 	})
 
 	if err != nil {
