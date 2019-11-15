@@ -10,7 +10,7 @@ func main() {
 	hub := newHub()
 	go hub.run()
 
-	go RunWebserver(hub)
+	//go RunWebserver(hub)
 
 	client := &APIClient{
 		BaseUrl: "https://api.timeular.com/api/v1/",
@@ -22,6 +22,10 @@ func main() {
 		log.Fatalf("Could not authenticate. Err: %s\n", err)
 	}
 	log.Println("API server authenticated")
+
+	if err := client.ActivateDevice(); err != nil {
+		log.Fatalf("Could not activate device. Err: %s\n", err)
+	}
 
 	activities, err := client.GetActivities()
 	if err != nil {

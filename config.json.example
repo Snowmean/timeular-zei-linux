@@ -1,4 +1,5 @@
 {
   "apiKey": "my-api-key",
-  "apiSecret": "my-api-secret"
+  "apiSecret": "my-api-secret",
+  "deviceSerial": "TZ*******"
 }

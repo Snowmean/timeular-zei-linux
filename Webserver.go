@@ -15,10 +15,7 @@ type Client struct {
 }
 
 var (
-	upgrader = websocket.Upgrader{
-		ReadBufferSize:  1024,
-		WriteBufferSize: 1024,
-	}
+	upgrader = websocket.Upgrader{}
 )
 
 const (
